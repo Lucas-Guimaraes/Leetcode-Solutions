@@ -3,8 +3,9 @@
  * @return {number[]}
  */
 var sortedSquares = function(nums) {
-    nums = nums.map(square)
-    return nums.sort(function(a, b) {return a-b})
+  return nums.map(power).sort(function(a,b) {return a-b})
 };
 
-let square = n => n ** 2
+function power(num) {
+    return num ** 2
+}
