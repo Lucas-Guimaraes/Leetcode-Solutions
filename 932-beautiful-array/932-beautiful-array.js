@@ -1,7 +1,3 @@
-/**
- * @param {number} n
- * @return {number[]}
- */
 var beautifulArray = function(n) {
     let res = [1]
     while (res.length < n)
