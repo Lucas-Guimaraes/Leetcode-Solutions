@@ -1,16 +1,16 @@
 var getSumAbsoluteDifferences = function(nums) {
-    let res = []
-    let sum = nums.reduce((a, b) => a + b)
-    let len = nums.length
-    let sumR = 0
-    let sumL = 0
+    res = []
+    sum = nums.reduce((a, b) => a + b)
+    len = nums.length
+    sumR = 0
+    sumL = 0
     for (let i = 0; i < len; i++) {
-        let cur = nums[i]
+        cur = nums[i]
         sumL += nums[i]
         sumR = sum - sumL
-        let n = i + 1
-        let A = cur * n - sumL
-        let B = sumR - cur * (len - n)
+        next = i + 1
+        A = cur * next - sumL
+        B = sumR - cur * (len - next)
         res.push(A + B)
     }
     return res
